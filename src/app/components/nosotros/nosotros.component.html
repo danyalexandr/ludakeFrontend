@@ -1,0 +1,115 @@
+<div class="container">
+  <h1>Nuestra Empresa</h1>
+<!--MISION-->
+<mat-accordion>
+    <mat-expansion-panel hideToggle>
+      <!--<mat-expansion-panel-header>
+        <mat-panel-title>
+          MISION
+        </mat-panel-title>
+      </mat-expansion-panel-header>-->
+    </mat-expansion-panel>
+    <mat-expansion-panel (opened)="panelOpenStateMision = true"
+                         (closed)="panelOpenStateMision = false">
+      <mat-expansion-panel-header>
+        <mat-panel-description>
+            MISION <!--descripcion del panel-->
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <p>
+            La misión de Ludake Graphics es proporcionar soluciones innovadoras en diseño gráfico y producción de impresión
+            de alta calidad para satisfacer las necesidades de nuestros clientes. A través de un compromiso constante con la 
+            excelencia, la creatividad y la atención al detalle, buscamos ayudar a nuestros clientes a comunicar de manera 
+            efectiva sus mensajes y promover su marca.
+        </p>
+    </mat-expansion-panel>
+      </mat-accordion>
+      
+      <!--VISION-->
+      <mat-accordion>
+        <mat-expansion-panel hideToggle>
+          <!--<mat-expansion-panel-header>
+            <mat-panel-title>
+              VISION
+            </mat-panel-title>
+          </mat-expansion-panel-header>-->
+        </mat-expansion-panel>
+        <mat-expansion-panel (opened)="panelOpenStateVision = true"
+                             (closed)="panelOpenStateVision = false">
+          <mat-expansion-panel-header>
+            <mat-panel-description>
+               VISION <!--descripcion del panel-->
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+          <p>
+            Nuestra visión es ser reconocidos como una empresa líder en el mercado de las artes gráficas, destacándonos 
+            por la calidad de nuestros productos y servicios, el compromiso con nuestros clientes y la innovación constante. 
+            Aspiramos a ser una empresa en constante crecimiento y desarrollo, que se adapta a las necesidades del mercado y 
+            se mantiene a la vanguardia de la tecnología y las tendencias en diseño gráfico e impresión.
+            </p>
+        </mat-expansion-panel>
+          </mat-accordion>
+
+        <!--OBJETIVO-->
+<mat-accordion>
+    <mat-expansion-panel hideToggle>
+     <!--<mat-expansion-panel-header>
+        <mat-panel-title>
+          OBJETIVO
+        </mat-panel-title>
+      </mat-expansion-panel-header>-->
+    </mat-expansion-panel>
+    <mat-expansion-panel (opened)="panelOpenStateObjetivo = true"
+                         (closed)="panelOpenStateObjetivo = false">
+      <mat-expansion-panel-header>
+        <mat-panel-description>
+           OBJETIVO <!--descripcion del panel-->
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <ul>
+            
+        <li>Ofrecer una amplia gama de servicios de diseño gráfico y producción de impresión de alta calidad 
+        que satisfagan las necesidades de nuestros clientes.</li>
+
+        <li>Proporcionar un servicio al cliente excepcional, brindando asesoramiento y soporte a lo largo 
+        de todo el proceso de producción.</li>
+
+        <li>Mantenernos actualizados en las últimas tendencias y tecnologías en diseño gráfico e impresión 
+        para garantizar que nuestros clientes reciban productos innovadores y de alta calidad.</li>
+
+        <li>Establecer relaciones de confianza y a largo plazo con nuestros clientes, trabajando de manera 
+        cercana y colaborativa para garantizar su satisfacción.</li>
+
+        <li>Expandir nuestra base de clientes y aumentar nuestra presencia en el mercado a través de una estrategia 
+        de marketing efectiva y una atención constante a las necesidades de nuestros clientes.</li>
+
+      </ul>
+    </mat-expansion-panel>
+      </mat-accordion>
+</div>
+<div class="container">
+  <h1>Contactanos!</h1>
+</div>
+<!--PRUEBA DE FORMULARIO DE CONTACTO-->
+<form (submit)="onSubmit()" [formGroup]="contactForm">
+  <div class="mb-3">
+    <label for="name" class="form-label">Nombre</label>
+    <input type="text" class="form-control" id="name" formControlName="name" required>
+  </div>
+  <div class="mb-3">
+    <label for="email" class="form-label">Correo electrónico</label>
+    <input type="email" class="form-control" id="email" formControlName="email" required>
+  </div>
+  <div class="mb-3">
+    <label for="subject" class="form-label">Asunto</label>
+    <input type="text" class="form-control" id="subject" formControlName="subject" required>
+  </div>
+  <div class="mb-3">
+    <label for="message" class="form-label">Mensaje</label>
+    <textarea class="form-control" id="message" rows="5" formControlName="message" required></textarea>
+  </div>
+  <button type="submit" class="btn btn-primary">Enviar mensaje</button>
+</form>
+
+
+  

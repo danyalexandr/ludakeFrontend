@@ -1,0 +1,48 @@
+.container{
+  padding-top: 50px;
+}
+
+.mat-mdc-form-field + .mat-mdc-form-field {
+  margin-left: 8px;
+}
+li{
+  margin-top: 10px;
+}
+.contact-form {
+  margin: 0 auto;
+  max-width: 500px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background-color: #0069d9;
+  border-color: #0062cc;
+  color: #fff;
+}
+
+.form-control:focus {
+  border-color: #007bff;
+  box-shadow: none;
+}
+@media (max-width: 576px) {
+  .form-control {
+    margin-bottom: 1rem;
+  }
+  .btn-primary {
+    width: 100%;
+  }
+}
