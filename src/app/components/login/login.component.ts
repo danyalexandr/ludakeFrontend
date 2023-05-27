@@ -1,15 +1,79 @@
-import { Component } from '@angular/core';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { Component, Input } from '@angular/core';
+import { Route, Router } from '@angular/router';
+import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
+import { AuthService } from 'src/app/services/auth.service';
+import { User } from 'src/assets/model/user';
 
 @Component({
   selector: 'app-login',
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  template: `
+ <div class="modal modal-sheet position-static d-block bg-body-secondary p-4 py-md-5" tabindex="-1" role="dialog" id="modalSignin">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content rounded-4 shadow">
+        <div class="modal-header p-5 pb-4 border-bottom-0">
+          <h1 class="fw-bold mb-0 fs-2">Log in</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+  
+        <div class="modal-body p-5 pt-0">
+          <form (ngSubmit)="onSubmit()">
+            <div class="form-floating mb-3">
+              <input type="email" class="form-control rounded-3" id="floatingInput" 
+                     placeholder="name@example.com" name="email" [(ngModel)]="email" required>
+              <label for="floatingInput">Email address</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input type="password" class="form-control rounded-3" id="floatingPassword" 
+                     placeholder="Password" name="password" [(ngModel)]="password" required>
+              <label for="floatingPassword">Password</label>
+            </div>
+            <button class="w-100 mb-2 btn btn-lg rounded-3 btn-primary" type="submit">OK</button>
+            <small class="text-body-secondary">By clicking Sign up, you agree to the terms of use.</small>
+            <hr class="my-4">                   
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+`
 })
+
 export class LoginComponent {
 
-  constructor() { }
+  @Input() name: string;
+  public email:string = '';
+  public password:string = '';
+  public user:User[] = [];
 
-  openLoginModal() {
+  constructor(public activeModal:NgbActiveModal, private router:Router, private auth:AuthService) { 
+    this.name = '';
+  }
 
+  log(){
+    console.log('CLIC');
+  }
+
+  //test de login
+ onSubmit() {
+  this.auth.login(this.email, this.password).subscribe(
+    response => {
+      console.log('Inicio de sesión exitoso:', response);
+      this.router.navigate(['/home']);
+    },
+    error => {
+      console.error('Error al iniciar sesión:', error);
+    }
+  );
+}
+
+  onLogout() {
+    this.auth.logout();
+    console.log('Sesión cerrada');
+  }
+  
+  isAuthenticated(): boolean {
+    this.router.navigate(['/']);
+    return this.auth.isAuthenticated();
   }
 }

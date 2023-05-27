@@ -1,4 +1,6 @@
-div{
-    align-items: end;
-    align-items: center;
+p{
+text-align: center;
+}
+a{
+    pointer-events: fill;
 }

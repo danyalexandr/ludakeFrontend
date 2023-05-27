@@ -1,211 +1,72 @@
-<div class="container">
-  <div class="mat-card-title"><h1>ROLLOS PARA REGISTRADORA</h1></div>
-<mat-grid-list cols="6" rowHeight="1:2">
-   <!--producto 1-->
-  <mat-grid-tile>
-    <div class="card" style="width: 18rem;">
-      <img src="https://material.angular.io/assets/img/examples/shiba2.jpg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
+  <div class="album py-5 bg-body-tertiary">
+    <div class="container">
+      <div class="col-md-12">
+        <h1>productos 1</h1>
       </div>
-    </div>
-  </mat-grid-tile>
-  <!--Producto 2-->
-  <mat-grid-tile> 
-    <div class="card" style="width: 18rem;">
-      <img src="https://material.angular.io/assets/img/examples/shiba2.jpg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
+      <ul *ngFor="let item1 of producto">
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src={{item1.urlImage}}>
+            <div class="card-body">
+              <p class="card-text">{{item1.caracteristicas}}</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                </div>
+                <small class="text-body-secondary">9 mins</small>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-  </mat-grid-tile>
-  <!--producto 3-->
-  <mat-grid-tile>
-    <div class="card" style="width: 18rem;">
-      <img src="https://material.angular.io/assets/img/examples/shiba2.jpg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
+    </ul>
+        <!--item 2-->
+        <div class="col-md-12">
+          <h1>productos 2</h1>
+        </div>
+           <ul *ngFor="let item2 of producto">
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src={{item2.urlImage}}>
+            <div class="card-body">
+              <p class="card-text">{{item2.caracteristicas}}</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                </div>
+                <small class="text-body-secondary">9 mins</small>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-  </mat-grid-tile>
- <!--producto 4-->
-  <mat-grid-tile>
-    <div class="card" style="width: 18rem;">
-      <img src="https://material.angular.io/assets/img/examples/shiba2.jpg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
+    </ul>
+       <!--item 3-->
+       <div class="col-md-12">
+        <h1>productos 3</h1>
       </div>
-    </div>
-  </mat-grid-tile>
- <!--producto 5-->
-  <mat-grid-tile>
-    <div class="card" style="width: 18rem;">
-      <img src="https://material.angular.io/assets/img/examples/shiba2.jpg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
+       <ul *ngFor="let item3 of producto">
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src={{item3.urlImage}}>
+            <div class="card-body">
+              <p class="card-text">{{item3.caracteristicas}}</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                </div>
+                <small class="text-body-secondary">9 mins</small>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
+    </ul>
     </div>
-  </mat-grid-tile>
- <!--producto 6-->
-  <mat-grid-tile>
-    <div class="card" style="width: 18rem;">
-      <img src="https://material.angular.io/assets/img/examples/shiba2.jpg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
-    </div>
-  </mat-grid-tile>
-</mat-grid-list>
-<!--Otro segmento de productos-->
-<div class="mat-card-title"><h1>MATERIALES DE IMPRENTA</h1></div>
-<mat-grid-list cols="6" rowHeight="1:2">
-   <!--producto 1-->
-  <mat-grid-tile>
-    <div class="card" style="width: 18rem;">
-      <img src="https://material.angular.io/assets/img/examples/shiba2.jpg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
-    </div>
-  </mat-grid-tile>
-  <!--Producto 2-->
-  <mat-grid-tile> 
-    <div class="card" style="width: 18rem;">
-      <img src="https://material.angular.io/assets/img/examples/shiba2.jpg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
-    </div>
-  </mat-grid-tile>
-  <!--producto 3-->
-  <mat-grid-tile>
-    <div class="card" style="width: 18rem;">
-      <img src="https://material.angular.io/assets/img/examples/shiba2.jpg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
-    </div>
-  </mat-grid-tile>
- <!--producto 4-->
-  <mat-grid-tile>
-    <div class="card" style="width: 18rem;">
-      <img src="https://material.angular.io/assets/img/examples/shiba2.jpg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
-    </div>
-  </mat-grid-tile>
- <!--producto 5-->
-  <mat-grid-tile>
-    <div class="card" style="width: 18rem;">
-      <img src="https://material.angular.io/assets/img/examples/shiba2.jpg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
-    </div>
-  </mat-grid-tile>
- <!--producto 6-->
-  <mat-grid-tile>
-    <div class="card" style="width: 18rem;">
-      <img src="https://material.angular.io/assets/img/examples/shiba2.jpg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
-    </div>
-  </mat-grid-tile>
-</mat-grid-list>
-<!--Articulos de oficina-->
-<div class="mat-card-title"><h1>ARTICULOS DE OFICINA</h1></div>
-<mat-grid-list cols="6" rowHeight="1:2">
-   <!--producto 1-->
-  <mat-grid-tile>
-    <div class="card" style="width: 18rem;">
-      <img src="https://material.angular.io/assets/img/examples/shiba2.jpg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
-    </div>
-  </mat-grid-tile>
-  <!--Producto 2-->
-  <mat-grid-tile> 
-    <div class="card" style="width: 18rem;">
-      <img src="https://material.angular.io/assets/img/examples/shiba2.jpg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
-    </div>
-  </mat-grid-tile>
-  <!--producto 3-->
-  <mat-grid-tile>
-    <div class="card" style="width: 18rem;">
-      <img src="https://material.angular.io/assets/img/examples/shiba2.jpg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
-    </div>
-  </mat-grid-tile>
- <!--producto 4-->
-  <mat-grid-tile>
-    <div class="card" style="width: 18rem;">
-      <img src="https://material.angular.io/assets/img/examples/shiba2.jpg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
-    </div>
-  </mat-grid-tile>
- <!--producto 5-->
-  <mat-grid-tile>
-    <div class="card" style="width: 18rem;">
-      <img src="https://material.angular.io/assets/img/examples/shiba2.jpg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
-    </div>
-  </mat-grid-tile>
- <!--producto 6-->
-  <mat-grid-tile>
-  <div class="card" style="width: 18rem;">
-      <img src="https://material.angular.io/assets/img/examples/shiba2.jpg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
-    </div>
-  </mat-grid-tile>
-</mat-grid-list>
-</div>
+  </div>
